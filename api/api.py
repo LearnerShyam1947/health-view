@@ -24,7 +24,7 @@ api = Api(
     validate=True,
     doc="/api/v1",
     contact="Visit Doctors", 
-    contact_url="http://localhost:5000/doctors"
+    contact_url="https://health-view.onrender.com/doctor/search"
 )
 
 

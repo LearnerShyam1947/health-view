@@ -76,7 +76,8 @@
 
     async function fetchSymptoms() {
         try {
-            const response = await fetch("http://localhost:5000/predict/symptoms");
+            // predict
+            const response = await fetch("predict/symptoms");
             const data = await response.json();
             return data;
         } catch (error) {
@@ -94,7 +95,7 @@
             console.log(jsonData);
 
             // Make a POST request to the API with JSON data
-            const response = await fetch('http://localhost:5000/predict/', {
+            const response = await fetch('predict/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
