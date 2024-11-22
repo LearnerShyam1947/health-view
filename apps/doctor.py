@@ -120,7 +120,7 @@ def profile():
 
 @doctor.route("/insert")
 def insert():
-    csv_file_path = r'api\data\Doctors.csv'
+    csv_file_path = 'api/data/Doctors.csv'
 
 
 

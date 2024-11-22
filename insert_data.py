@@ -3,7 +3,7 @@ import csv
 from models import DoctorModel
 
 # Path to the CSV file
-csv_file_path = r'api\data\Doctors.csv'
+csv_file_path = 'api/data/Doctors.csv'
 
 def insert_doctors_from_csv(file_path):
     with open(file_path, 'r') as file:
