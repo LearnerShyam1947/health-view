@@ -35,5 +35,8 @@ def profile():
 
 @main.route("/user/profile")
 def user_profile():
-       
+    if not session.get('current_user'):
+        flash("login to access this route", "danger")
+        return redirect(url_for('auth.login', next="/"))
+    
     return render_template("profile.html")

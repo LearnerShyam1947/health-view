@@ -115,7 +115,11 @@ def register():
     return render_template("doctor/register.html", depts=depts)
 
 @doctor.route("/profile")
-def profile():    
+def profile():
+    if not session.get('current_user'):
+        flash("login to access this route", "danger")
+        return redirect(url_for('doctor.login', next="/"))
+    
     return render_template("doctor/profile.html")
 
 @doctor.route("/insert")
